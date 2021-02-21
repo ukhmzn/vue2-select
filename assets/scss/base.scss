@@ -1,0 +1,66 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    min-height: 100vh;
+    background-color: #ffffff;
+    min-width: 320px;
+}
+
+html {
+    overflow: auto;
+}
+
+body {
+    overflow: hidden;
+}
+
+#__nuxt {
+    min-height: 100vh;
+}
+
+#__layout {
+    position: relative;
+    min-height: 100vh;
+}
+
+.wrapper {
+    display: flex;
+    position: relative;
+    min-height: 100vh;
+    min-width: 320px;
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-height: 100vh;
+    }
+    &__content {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: auto;
+        min-height: 1px;
+    }
+}
+
+.container {
+    position: relative;
+    width: 1170px;
+    min-width: 320px;
+    padding: 0 30px;
+    margin: 0 auto;
+    @include lg-block {
+        width: 970px;
+    }
+    @include md-block {
+        width: 100%;
+    }
+    @include sm-block {
+        padding: 0 15px;
+    }
+}
